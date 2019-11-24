@@ -130,25 +130,22 @@ while not quiz_end:
 
     if questions == 5:
         print()
-        print(""),
-        print(input(""))
+        print("What is your favorite holiday"),
+        print(input(" Annoy Squidward Day, The purge, Christmas, or Money "
+                    "Day"))
 
-        if input == "Money" or "money":
+        if input == "Money Day" or "money day":
             mrkrabs + int(1)
 
-        elif input == "science" or "Science":
-            plankton + int(1)
+        elif input == "Christmas" or "christmas":
             sandy + int(1)
 
-        elif input == "Sleeping" or "sleeping":
+        elif input == "Annoy Squidward Day" or "annoy squidward day":
             patrick + int(1)
-
-        elif input == "Cooking" or "cooking":
             spongebob + int(1)
 
-        elif input == "Jelly Fishing" or "jellyfishing":
-            spongebob + int(1)
-            patrick + int(1)
+        elif input == "the purge" or "The Purge":
+            plankton + int(1)
 
         else:
             print("this selection is invalid, please correct any spelling "
@@ -156,3 +153,16 @@ while not quiz_end:
             questions = 5
 
     questions += 1
+
+    quiz_end = True
+
+if spongebob > 3:
+    print("You resemble Spongebob Squarepants! [' o '] ")
+elif patrick > 3:
+    print("You resemble Patrick Star! :O ")
+elif sandy > 3:
+    print("you resemble Sandy Cheeks! >.< ")
+elif mrkrabs > 3:
+    print("You resemble Mr. Krabs! $$$$ ")
+elif plankton > 3:
+    print("Yoy resemble Plankton! >:) ")
