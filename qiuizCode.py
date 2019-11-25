@@ -49,20 +49,20 @@ while not quiz_end:
         print("Which of the following is your favorite pass time?"),
         print(input("Money, cooking, science, Jellyfishing, or sleeping?"))
 
-        if input == "Money" or "money":
+        if input == "Money" or input == "money":
             mrkrabs + int(1)
 
-        elif input == "science" or "Science":
+        elif input == "science" or input == "Science":
             plankton + int(1)
             sandy + int(1)
 
-        elif input == "Sleeping" or "sleeping":
+        elif input == "Sleeping" or input == "sleeping":
             patrick + int(1)
 
-        elif input == "Cooking" or "cooking":
+        elif input == "Cooking" or input == "cooking":
             spongebob + int(1)
 
-        elif input == "Jelly Fishing" or "jellyfishing":
+        elif input == "Jelly Fishing" or input == "jellyfishing":
             spongebob + int(1)
             patrick + int(1)
 
@@ -78,17 +78,17 @@ while not quiz_end:
         print("Which of the following is your favorite color?"),
         print(input("Green, yellow, pink or blue?"))
 
-        if input == "Green " or "green":
+        if input == "Green " or input == "green":
             mrkrabs + int(1)
 
-        elif input == "Yellow" or "yellow":
+        elif input == "Yellow" or input == "yellow":
             spongebob + int(1)
             sandy + int(1)
 
-        elif input == "pink" or "Pink":
+        elif input == "pink" or input == "Pink":
             patrick + int(1)
 
-        elif input == "blue" or "Blue":
+        elif input == "blue" or input == "Blue":
             plankton + int(1)
 
         else:
@@ -103,22 +103,22 @@ while not quiz_end:
         print("How would your friends describe you?"),
         print(input("Stupid, Funny, Stingy, Smart, or Creative?"))
 
-        if input == "Stingy" or "stingy":
+        if input == "Stingy" or input == "stingy":
             mrkrabs + int(1)
             plankton + int(1)
 
-        elif input == "Smart" or "Smart":
+        elif input == "Smart" or input == "Smart":
             plankton + int(1)
             sandy + int(1)
 
-        elif input == "Stupid" or "stupid":
+        elif input == "Stupid" or input == "stupid":
             patrick + int(1)
             spongebob + int(1)
 
-        elif input == "Funny" or "Funny":
+        elif input == "Funny" or input == "Funny":
             patrick + int(1)
 
-        elif input == "creative" or "Creative":
+        elif input == "creative" or input == "Creative":
             sandy + int(1)
 
         else:
@@ -134,17 +134,18 @@ while not quiz_end:
         print(input(" Annoy Squidward Day, The purge, Christmas, or Money "
                     "Day"))
 
-        if input == "Money Day" or "money day":
+        if input == "Money Day" or input == "money day":
             mrkrabs + int(1)
 
-        elif input == "Christmas" or "christmas":
+        elif input == "Christmas" or input == "christmas":
             sandy + int(1)
 
-        elif input == "Annoy Squidward Day" or "annoy squidward day":
+        elif input == "Annoy Squidward Day" or input == "annoy squidward day":
             patrick + int(1)
             spongebob + int(1)
+            squidward - int(1)
 
-        elif input == "the purge" or "The Purge":
+        elif input == "the purge" or input == "The Purge":
             plankton + int(1)
 
         else:
@@ -154,15 +155,97 @@ while not quiz_end:
 
     questions += 1
 
+    if questions == 6:
+        print()
+        print("Pick a word."),
+        print(input("Money, Cheerful, Imagination, Science, Music"))
+
+        if input == "Money" or input == "money":
+            mrkrabs + int(1)
+
+        elif input == "Cheerful" or input == "cheerful":
+            spongebob + int(1)
+
+        elif input == "Imagination" or input == "imagination":
+            patrick + int(1)
+            spongebob + int(1)
+
+        elif input == "Science" or input == "science":
+            sandy + int(1)
+
+        elif input == "Music" or input == "music":
+            squidward + int(1)
+
+        else:
+            print("this selection is invalid, please correct any spelling "
+                  "errors, or choose a valid response :)")
+            questions = 6
+
+    if questions == 7:
+        print()
+        print("Pick an instrument."),
+        print(input("Violin, Mayonnaise, Guitar, Clarinet, or Drums"))
+
+        if input == "Violin" or input == "violin":
+            mrkrabs + int(1)
+
+        elif input == "Guitar" or input == "guitar":
+            spongebob + int(1)
+
+        elif input == "Mayonnaise" or input == "mayonnaise":
+            patrick + int(1)
+
+        elif input == "Drums" or input == "drums":
+            sandy + int(1)
+
+        elif input == "Clarinet" or input == "clarinet":
+            squidward + int(1)
+
+        else:
+            print("this selection is invalid, please correct any spelling "
+                  "errors, or choose a valid response :)")
+            questions = 7
+
+    if questions == 8:
+        print()
+        print("Are you ready????"),
+        print(input("I'm ready, ready?, oh no, Ready to count me money, "
+                    "ready for the secret formula!"))
+
+        if input == "Ready to count me money" or input == "ready to count me" \
+                                                          " money":
+            mrkrabs + int(1)
+
+        elif input == "I'm ready" or input == "I'm Ready":
+            spongebob + int(1)
+
+        elif input == "ready?" or input == "Ready?":
+            patrick + int(1)
+
+        elif input == "ready for the secret formula!":
+            plankton + int(1)
+
+        else:
+            print("this selection is invalid, please correct any spelling "
+                  "errors, or choose a valid response :)")
+            questions = 8
+
+    if spongebob > 4:
+        print("You resemble Spongebob Squarepants! [' o '] ")
+
+    elif patrick > 4:
+        print("You resemble Patrick Star! :O ")
+
+    elif sandy > 4:
+        print("you resemble Sandy Cheeks! >.< ")
+
+    elif mrkrabs > 4:
+        print("You resemble Mr. Krabs! $$$$ ")
+
+    elif plankton > 4:
+        print("Yoy resemble Plankton! >:) ")
+
     quiz_end = True
 
-if spongebob > 3:
-    print("You resemble Spongebob Squarepants! [' o '] ")
-elif patrick > 3:
-    print("You resemble Patrick Star! :O ")
-elif sandy > 3:
-    print("you resemble Sandy Cheeks! >.< ")
-elif mrkrabs > 3:
-    print("You resemble Mr. Krabs! $$$$ ")
-elif plankton > 3:
-    print("Yoy resemble Plankton! >:) ")
+print("Thank you for playing! I hope you enjoyed! :D")
+
