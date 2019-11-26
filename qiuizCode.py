@@ -1,251 +1,206 @@
-print("Welcome! To the Spongebob Squarepants quiz!"), '\n'
-print("Here you will be asked a series of questions regarding food, activities"
-      ", etc. to see who you resemble most from Spongebob!"), '\n'
+# Michael Householder
+# Github @Mikeh627
+# Naruto quiz
+
+def welcome_message():
+    print("Welcome to the Naruto Character Quiz! Here we will determine the "
+          "character you resemble most!")
 
 
-def invalid_input():
-    print("Invalid input, please make sure there are no grammatical errors or "
-          "incorrect capitals. :)")         # this is a function to no accept an invalid input
+def do_quiz():
+    good_answer = False
 
+    kakashi = 0
+    naruto = 0
+    sasuke = 0
+    sakura = 0
+    shikamaru = 0
 
-quiz_end = False    # this sets the quiz up to run until the end where we will make this a true statement and print who you got
-
-questions = 1       # creating this variable with a int() will allow us to make the questions continue once the user inputs a str()
-
-patrick = 0
-sandy = 0
-mrkrabs = 0         # these variables allow the program to know throughout the quiz which person has the hightest number which you get +1 for answering specific way throughout the quiz
-plankton = 0
-spongebob = 0
-
-while not quiz_end:
-    if questions == 1:          #this is the start of our while loop, the questions will be in this until satisfactory amount of questions are prompted to the user
+    while not good_answer:
         print()
-        print("Which of these foods would you choose?"),
-        print(input("Money, Chum, Ice Cream, or Krabby Patties?")),
+        print("Question #1) Which of these is describes you?")
+        answer = input("Edgy, Chill, Obnoxious, Smart, or Cool?")
 
-        if input == "Money" or "money":
-            mrkrabs + int(1)
+        if answer.lower() == "edgy":
+            sasuke += 1
+            good_answer = True
 
-        elif input == "Chum" or "chum":
-            plankton + int(1)                               #these input score the user into different variables as mentioned earlier
+        elif answer.lower() == "chill":
+            kakashi += 1
+            good_answer = True
 
-        elif input == "Ice Cream" or "ice cream" or "Ice Cream":
-            patrick + int(1)
+        elif answer.lower() == "obnoxious":
+            naruto += 1
+            good_answer = True
 
-        elif input == "Krabby patties" or "Krabby Patties":
-            spongebob + int(1)
-            sandy + int(1)
+        elif answer.lower() == "smart":
+            shikamaru += 1
+            good_answer = True
+
+        elif answer.lower() == "cool":
+            kakashi += 1
+            shikamaru += 1
+            good_answer = True
 
         else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 1
+            print("Invalid input, please make sure spelling is correct and "
+                  "that you choose a valid input :)")
+            good_answer = False
+    good_answer = False
 
-    questions += 1          # this little guy allows us to go up after every question is answered
-
-    if questions == 2:
+    while not good_answer:
         print()
-        print("Which of the following is your favorite pass time?"),
-        print(input("Money, cooking, science, Jellyfishing, or sleeping?"))
+        print("Question #2) What energy would you choose?")
+        answer = input("Lightning, Wind, Shadow, or Healing?")
 
-        if input == "Money" or input == "money":
-            mrkrabs + int(1)
+        if answer.lower() == "lightning":
+            sasuke += 1
+            kakashi += 1
+            good_answer = True
 
-        elif input == "science" or input == "Science":
-            plankton + int(1)
-            sandy + int(1)
+        elif answer.lower() == "wind":
+            naruto += 1
+            good_answer = True
 
-        elif input == "Sleeping" or input == "sleeping":
-            patrick + int(1)
+        elif answer.lower() == "shadow":
+            shikamaru += 1
+            good_answer = True
 
-        elif input == "Cooking" or input == "cooking":
-            spongebob + int(1)
-
-        elif input == "Jelly Fishing" or input == "jellyfishing":
-            spongebob + int(1)
-            patrick + int(1)
+        elif answer.lower() == "healing":
+            sakura += 1
+            good_answer =True
 
         else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 2
+            print("Invalid input, please make sure spelling is correct and "
+                  "that you choose a valid input :)")
+            good_answer = False
+    good_answer = False
 
-    questions += 1
-
-    if questions == 3:
+    while not good_answer:
         print()
-        print("Which of the following is your favorite color?"),
-        print(input("Green, yellow, pink or blue?"))
+        print("Question #3) Which element do you favor?")
+        answer = input("Air, Water, Fire, or Earth?")
 
-        if input == "Green " or input == "green":
-            mrkrabs + int(1)
+        if answer.lower() == "air":
+            naruto += 1
+            good_answer = True
 
-        elif input == "Yellow" or input == "yellow":
-            spongebob + int(1)
-            sandy + int(1)
+        elif answer.lower() == "water":
+            sakura += 1
+            good_answer = True
 
-        elif input == "pink" or input == "Pink":
-            patrick + int(1)
+        elif answer.lower() == "fire":
+            kakashi += 1
+            sasuke += 1
+            good_answer = True
 
-        elif input == "blue" or input == "Blue":
-            plankton + int(1)
+        elif answer.lower() == "earth":
+            shikamaru += 1
+            good_answer = True
 
         else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 3
+            print("Invalid input, please make sure spelling is correct and "
+                  "that you choose a valid input :)")
+            good_answer = False
+    good_answer = False
 
-    questions += 1
-
-    if questions == 4:
+    while not good_answer:
         print()
-        print("How would your friends describe you?"),
-        print(input("Stupid, Funny, Stingy, Smart, or Creative?"))
+        print("Question #4) What is your fighting style?")
+        answer = input("Bold, Calm, Powerful, Tactful or Runaway?")
 
-        if input == "Stingy" or input == "stingy":
-            mrkrabs + int(1)
-            plankton + int(1)
+        if answer.lower() == "bold":
+            naruto += 1
+            good_answer = True
 
-        elif input == "Smart" or input == "Smart":
-            plankton + int(1)
-            sandy + int(1)
+        elif answer.lower() == "calm":
+            shikamaru += 1
+            good_answer = True
 
-        elif input == "Stupid" or input == "stupid":
-            patrick + int(1)
-            spongebob + int(1)
+        elif answer.lower() == "powerful":
+            sasuke += 1
+            good_answer = True
 
-        elif input == "Funny" or input == "Funny":
-            patrick + int(1)
+        elif answer.lower() == "tactful":
+            kakashi += 1
+            good_answer = True
 
-        elif input == "creative" or input == "Creative":
-            sandy + int(1)
+        elif answer.lower() == "runaway":
+            sakura += 1
+            good_answer = True
 
         else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 4
+            print("Invalid input, please make sure spelling is correct and "
+                  "that you choose a valid input :)")
+            good_answer = False
+    good_answer = False
 
-    questions += 1
-
-    if questions == 5:
+    while not good_answer:
         print()
-        print("What is your favorite holiday"),
-        print(input(" Annoy Squidward Day, The purge, Christmas, or Money "
-                    "Day"))
+        print("Question #5) What is most important to you?")
+        answer = input("Friends, Power, Intelligence, Strategy or "
+                       "Uselessness?")
 
-        if input == "Money Day" or input == "money day":
-            mrkrabs + int(1)
+        if answer.lower() == "friends":
+            naruto += 1
+            good_answer = True
 
-        elif input == "Christmas" or input == "christmas":
-            sandy + int(1)
+        elif answer.lower() == "power":
+            sasuke += 1
+            good_answer = True
 
-        elif input == "Annoy Squidward Day" or input == "annoy squidward day":
-            patrick + int(1)
-            spongebob + int(1)
-            squidward - int(1)
+        elif answer.lower() == "intelligence":
+            kakashi += 1
+            good_answer = True
 
-        elif input == "the purge" or input == "The Purge":
-            plankton + int(1)
+        elif answer.lower() == "strategy":
+            shikamaru += 1
+            good_answer = True
+
+        elif answer.lower() == "uselessness":
+            sakura += 1
+            good_answer = True
 
         else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 5
+            print("Invalid input, please make sure spelling is correct and "
+                  "that you choose a valid input :)")
+            good_answer = False
+    good_answer = False
 
-    questions += 1
-
-    if questions == 6:
+    while not good_answer:
         print()
-        print("Pick a word."),
-        print(input("Money, Cheerful, Imagination, Science, Music"))
+        print("Question #6) What pass-time do you enjoy the most?")
+        answer = input("Exercising, Reading, Nothing, Training, Sleeping?")
 
-        if input == "Money" or input == "money":
-            mrkrabs + int(1)
+        if answer.lower() ==  "exercising":
+            naruto += 1
+            good_answer = True
 
-        elif input == "Cheerful" or input == "cheerful":
-            spongebob + int(1)
+        elif answer.lower() == "reading":
+            kakashi += 1
+            good_answer = True
 
-        elif input == "Imagination" or input == "imagination":
-            patrick + int(1)
-            spongebob + int(1)
+        elif answer.lower() == "nothing":
+            sakura += 1
+            good_answer = True
 
-        elif input == "Science" or input == "science":
-            sandy + int(1)
+        elif answer.lower() == "training":
+            sasuke += 1
+            good_answer = True
 
-        elif input == "Music" or input == "music":
-            squidward + int(1)
+        elif answer.lower() == "sleeping":
+            shikamaru += 1
+            good_answer = True
 
         else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 6
+            print("Invalid input, please make sure spelling is correct and "
+                      "that you choose a valid input :)")
+            good_answer = False
+    good_answer = False
 
-    if questions == 7:
-        print()
-        print("Pick an instrument."),
-        print(input("Violin, Mayonnaise, Guitar, Clarinet, or Drums"))
 
-        if input == "Violin" or input == "violin":
-            mrkrabs + int(1)
+welcome_message()
 
-        elif input == "Guitar" or input == "guitar":
-            spongebob + int(1)
+do_quiz()
 
-        elif input == "Mayonnaise" or input == "mayonnaise":
-            patrick + int(1)
-
-        elif input == "Drums" or input == "drums":
-            sandy + int(1)
-
-        elif input == "Clarinet" or input == "clarinet":
-            squidward + int(1)
-
-        else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 7
-
-    if questions == 8:
-        print()
-        print("Are you ready????"),
-        print(input("I'm ready, ready?, oh no, Ready to count me money, "
-                    "ready for the secret formula!"))
-
-        if input == "Ready to count me money" or input == "ready to count me" \
-                                                          " money":
-            mrkrabs + int(1)
-
-        elif input == "I'm ready" or input == "I'm Ready":
-            spongebob + int(1)
-
-        elif input == "ready?" or input == "Ready?":
-            patrick + int(1)
-
-        elif input == "ready for the secret formula!":
-            plankton + int(1)
-
-        else:
-            print("this selection is invalid, please correct any spelling "
-                  "errors, or choose a valid response :)")
-            questions = 8
-
-    if spongebob > 4:
-        print("You resemble Spongebob Squarepants! [' o '] ")
-
-    elif patrick > 4:
-        print("You resemble Patrick Star! :O ")
-
-    elif sandy > 4:
-        print("you resemble Sandy Cheeks! >.< ")
-
-    elif mrkrabs > 4:
-        print("You resemble Mr. Krabs! $$$$ ")
-
-    elif plankton > 4:
-        print("Yoy resemble Plankton! >:) ")
-
-    quiz_end = True
-
-print("Thank you for playing! I hope you enjoyed! :D")
 
